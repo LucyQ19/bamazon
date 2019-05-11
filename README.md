@@ -10,7 +10,7 @@ This app gives the user the option to purchase from the amazing BAMazon store!  
 2. Peform npm install in your terminal.
 3. Run node bamazonCustomer.js in your terminal.
 
-#### Packages Used:
+### Packages Used:
 
 ### Customer Application:
 
