@@ -20,7 +20,44 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((err) => {
-    if (err) throw err;
+    if(err) throw err;
     
     console.log("Connected as id: " + connection.threadId);
-})
+
+    displayTable();
+});
+
+const displayTable = () => {
+    let query = "SELECT * FROM products";
+
+    connection.query(query, (err, res, fields) => {
+        if(err) throw err;
+
+        let table = new Table({
+            head: [
+                "item_ID",
+                "product_Name",
+                "department_Name",
+                "price",
+                "stock_Quantity"
+            ],
+
+            colWidths: [10, 65, 20, 10, 20]
+        });
+        
+        for (let i = 0; i < res.length; i++) {
+            let newArr = new Array();
+
+             table.push(newArr);
+
+            for (let j = 0; j < columns.length; j++) {
+                newArr.push(res[i][columns[j]]);
+            }
+        }
+
+        console.log(table.toString());
+
+        managerResquest();
+
+    });
+}
