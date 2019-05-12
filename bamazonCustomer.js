@@ -68,4 +68,27 @@ const displayTable = () => {
     });
 };
 
-const customerRequest = 
+const customerRequest = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "id",
+            message: "What is the ID of the product you would like to purchase?",
+            validate: (value) => {
+                let valid = !isNaN(parseFloat(value));
+                return valid || "Please enter the item_ID!"
+            }
+        },
+        {
+            type: "input",
+            name: "quantity",
+            message: "How many would you like to buy?",
+            validate: (value) => {
+                let valid = !isNaN(parseFloat(value));
+                return valid || "Please enter the quantity amount"
+            }
+        }
+    ]).then((answer) => {
+        checkQuantity(answer.id, answer.quantity);
+    });
+};
