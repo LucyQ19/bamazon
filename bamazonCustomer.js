@@ -111,7 +111,7 @@ const checkQuantity = (id, quantity) => {
 
                 connection.query(query, [
                     {
-                        stockQuantity: stockedQuantity - quantity
+                        stock_Quantity: stockedQuantity - quantity
                     },
                     {
                         item_ID: id 
@@ -121,7 +121,7 @@ const checkQuantity = (id, quantity) => {
                     if(err) throw err;
 
                     promptBool = false;
-                    
+
                     displayTable();
                 });
             } else {
