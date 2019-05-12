@@ -25,12 +25,13 @@ These are the prompts the User must answer:
 
 Once the the customer has a placed an order, the table updates with the new amounts of stock quantity:
 
-![Image of BAMazon Insufficient Quantity Message](./images/BAMazonInsufficientQuantityMessage.png)
+![Image of BAMazon Insufficient Quantity Message](./images/BAMazonUpdateTable.png)
 
 
 or the message "Insufficient quantity!" appears:
 
-![Image of BAMazon Insufficient Quantity Message](./images/BAMazonUpdateTable.png)
+![Image of BAMazon Insufficient Quantity Message](./images/BAMazonInsufficientQuantityMessage.png)
+
 
 ### Thanks for visiting my github!
 
