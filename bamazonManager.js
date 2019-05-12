@@ -208,7 +208,7 @@ const addNewProduct = () => {
         },
         {
             type: "input",
-            name: "price",
+            name: "stockQty",
             message: "How many do you want to add?"
         }
     ]).then((answer) => {
