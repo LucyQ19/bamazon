@@ -143,7 +143,6 @@ const updateQuantity = () => {
                 if (res[i].product_Name === answer.product) {
 
                     count++
-
                 }
             }
 
@@ -163,9 +162,12 @@ const updateQuantity = () => {
                     let quantity = parseInt(answer.quantity);
 
                     connection.query(query, [{product_Name: product}], (err, res, fields) => {
-                        console.log(`Stock Quantity: ${stockQty}
-                                     Quantity: ${quantity}
-                                     Stock Quantity: ${product}
+                        console.log(`
+                       --------------------------------                   
+                        Stock Quantity: ${stockQty}
+                        Quantity: ${quantity}
+                        Stock Quantity: ${product}
+                        --------------------------------
                         `);
 
                         let query = "UPDATE products SET ? WHERE ?";
@@ -185,4 +187,46 @@ const updateQuantity = () => {
             }
         });
     });
+}
+
+const addNewProduct = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "product",
+            message: "What is the product name?"
+        },
+        {
+            type: "input",
+            name: "department",
+            message: "What is the department name?"
+        },
+        {
+            type: "input",
+            name: "price",
+            message: "How much does it cost?",
+        },
+        {
+            type: "input",
+            name: "price",
+            message: "How many do you want to add?"
+        }
+    ]).then((answer) => {
+        let product = answer.product;
+        let department = answer.department;
+        let price = answer.price;
+        let stockQty = answer.stockQty;
+        let post = {
+            product_Name: product,
+            department_Name: department,
+            price: price,
+            stock_Quantity: stockQty
+        }
+        let query = "INSERT INTO products SET ?";
+        connection.query(query, post, (err, res, fields) => {
+            if(err) throw err;
+
+            displayTable();
+        })
+    })
 }
