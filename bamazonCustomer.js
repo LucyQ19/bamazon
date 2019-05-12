@@ -48,7 +48,7 @@ const displayTable = () => {
                 "stock_Quantity"
             ],
 
-            colWidths: [10, 50, 15, 10, 10]
+            colWidths: [10, 75, 20, 10, 20]
         });
 
         for (let i = 0; i < resJSON.length; i++) {
