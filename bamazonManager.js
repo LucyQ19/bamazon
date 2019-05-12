@@ -125,3 +125,64 @@ const displayLowInvTable = () => {
         managerRequest();
     })
 }
+
+const updateQuantity = () => {
+    inquirer.prompt([{
+        type: "input",
+        name: "product",
+        message: "What is the name of the product?"
+    }]).then((answer) => {
+        let query = "SELECT product_Name FROM products";
+
+        let product = answer.product;
+
+        connection.query(query, (err, res, fields) => {
+            if(err) throw err;
+
+            for (let i = 0; i < res.length; i++) {
+                if (res[i].product_Name === answer.product) {
+
+                    count++
+
+                }
+            }
+
+            if (count > 0) {
+
+                count = 0; 
+
+                inquirer.prompt ([{
+                    type: "input",
+                    name: "quantity",
+                    message: "How many would you like to add?"
+                }]).then((answer) => {
+                    let query = "SELECT * FROM products WHERE ?";
+
+                    let stockQty = 0;
+
+                    let quantity = parseInt(answer.quantity);
+
+                    connection.query(query, [{product_Name: product}], (err, res, fields) => {
+                        console.log(`Stock Quantity: ${stockQty}
+                                     Quantity: ${quantity}
+                                     Stock Quantity: ${product}
+                        `);
+
+                        let query = "UPDATE products SET ? WHERE ?";
+                        connection.query(query, [{stock_Quantity: stockQty + quantity}, {product_Name: product}], (err, res, fields) => {
+                            if(err) throw err;
+
+                            console.log("Quantity Added!!!");
+
+                            displayTable();
+                        });
+                    });
+                });
+            } else {
+                console.log("That items does not exist");
+
+                updateQuantity();
+            }
+        });
+    });
+}

@@ -127,7 +127,7 @@ const checkQuantity = (id, quantity) => {
                     displayTable();
                 });
             } else {
-                console.log("Insufficient quanity!");
+                console.log("Insufficient quanity!!!");
             }
         }
             
