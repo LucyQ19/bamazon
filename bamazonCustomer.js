@@ -117,7 +117,11 @@ const checkQuantity = (id, quantity) => {
                         item_ID: id 
                     }
                 ], (err, res, fields) => {
+
+                    if(err) throw err;
+
                     promptBool = false;
+                    
                     displayTable();
                 });
             } else {
