@@ -95,4 +95,35 @@ const customerRequest = () => {
 
 const checkQuantity = (id, quantity) => {
 
+    let query = "SELECT stock_Quantity FROM products WHERE ?"
+    connection.query(query, {
+        item_ID: id
+    }, 
+        (err, res, fields) => {
+            if (err) throw err;
+
+            let stockedJSON = JSON.stringify(res, null, 2);
+            let stockedParsed = JSON.parse(stockedJSON);
+            let stockedQuantity = stockedParsed[0].stockQuantity;
+
+            if(stockedQuantity >= quantity) {
+                let query = "UPDATE products SET ? WHERE ?";
+
+                connection.query(query, [
+                    {
+                        stockQuantity: stockedQuantity - quantity
+                    },
+                    {
+                        item_ID: id 
+                    }
+                ], (err, res, fields) => {
+                    pomptBool = false;
+                    displayTable();
+                });
+            } else {
+                console.log("Insufficient Quanity . . . ");
+            }
+        }
+            
+    )
 }

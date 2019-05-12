@@ -5,14 +5,14 @@ CREATE DATABASE bamazon_DB;
 USE bamazon_DB;
 
 CREATE TABLE products(
-    item_id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(255) NOT NULL,
-    department_name VARCHAR(100) NOT NULL,
+    item_ID INT AUTO_INCREMENT PRIMARY KEY,
+    product_Name VARCHAR(255) NOT NULL,
+    department_Name VARCHAR(100) NOT NULL,
     price DECIMAL (10,2) NOT NULL,
-    stock_quantity INT NOT NULL
+    stock_Quantity INT NOT NULL
 );
 
-INSERT INTO products(product_name, department_name, price, stock_quantity)
+INSERT INTO products(product_Name, department_Name, price, stock_Quantity)
 VALUES ("Alterna HairCare Bamboo Smooth Anti-Frizz Shampoo", "Hair Care", 22.00, 2),
        ("Alterna HairCare Bamboo Smooth Anti-Frizz Conditioner", "Hair Care", 24.00, 14),
        ("Biore Self Heating One Minute Mask - Natural Charcoal - 4 ct", "Beauty", 5.99, 56),
