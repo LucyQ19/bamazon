@@ -25,5 +25,5 @@ VALUES ("Alterna HairCare Bamboo Smooth Anti-Frizz Shampoo", "Hair Care", 22.00,
        ("Oral-B Complete Deep Clean Toothbrush Soft", "Oral Care", 2.99, 64),
        ("Rubrik's Cube 3X3", "Toy", 9.59, 8),
        ("Sharp Objects by Gillian Flynn", "Ficiton", 7.99, 6),
-       ("Mary Poppins Returns (Blue Ray + DVD + Digital)", "Ficiton", 24.99, 48),
-       ("Ariana Grande thank u, next (CD)", "Ficiton", 13.99, 36);
+       ("Mary Poppins Returns (Blue Ray + DVD + Digital)", "Movies", 24.99, 48),
+       ("Ariana Grande thank u, next (CD)", "Music", 13.99, 36);
