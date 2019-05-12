@@ -17,8 +17,8 @@ This app gives the user the option to purchase from the amazing BAMazon store!  
 
 ### Customer Application:
 
-#### Table:
+### Table:
 
-![Image of BAMazon Customer Application Table](./images/BAMazonCustomerApplicationTable)
+![Image of BAMazon Customer Application Table](./images/BAMazonCustomerApplicationTable.png)
 
-#### Choices:
+### Choices:
