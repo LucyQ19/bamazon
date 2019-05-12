@@ -98,7 +98,7 @@ const checkQuantity = (id, quantity) => {
     let query = "SELECT stock_Quantity FROM products WHERE ?"
     connection.query(query, {
         item_ID: id,
-        stock_Quantity: quantity
+    
     }, 
         (err, res, fields) => {
             if (err) throw err;
@@ -112,7 +112,7 @@ const checkQuantity = (id, quantity) => {
 
                 connection.query(query, [
                     {
-                        stockQuantity: stockedQuantity - quantity
+                        stock_Quantity: stockedQuantity - quantity
                     },
                     {
                         item_ID: id 
