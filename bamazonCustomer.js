@@ -97,6 +97,7 @@ const checkQuantity = (id, quantity) => {
 
     let query = "SELECT stock_Quantity FROM products WHERE ?"
     connection.query(query, {
+       
         item_ID: id,
     
     }, 
@@ -105,7 +106,7 @@ const checkQuantity = (id, quantity) => {
 
             let stockedJSON = JSON.stringify(res, null, 2);
             let stockedParsed = JSON.parse(stockedJSON);
-            let stockedQuantity = stockedParsed[0].stockQuantity;
+            let stockedQuantity = stockedParsed[0].stock_Quantity;
 
             if(stockedQuantity >= quantity) {
                 let query = "UPDATE products SET ? WHERE ?";
