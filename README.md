@@ -23,4 +23,6 @@ This app gives the user the option to purchase from the amazing BAMazon store!  
 
 ![Image of BAMazon Customer Prompts](./images/BAMazonCustomerPrompts.png)
 
-Once the the customer has a placed an order, the table updates with the new amounts of stock quantity or the message "Insuffienct quantity!" appears.
+Once the the customer has a placed an order, the table updates with the new amounts of stock quantity or the message "Insufficient quantity!" appears.
+
+![Image of BAMazon Insufficient Quantity Message](./images/BAMazonInsufficientQuantityMessage.png)
