@@ -57,7 +57,39 @@ const displayTable = () => {
 
         console.log(table.toString());
 
-        managerResquest();
+        managerRequest();
 
+    });
+}
+
+const managerRequest = () => {
+    inquirer.prompt ([{
+        type: "rawlist",
+        name: "choice",
+        message: "What would you like to do?",
+        choices: [ 
+            "View Products for Sale",
+            "View Low Inventory",
+            "Add a New Product",
+            "Add Quantity to Existing Item"
+        ]
+    }]).then((answer) => {
+        switch(answer.choice) {
+            case "View Products for Sale":
+            displayTable();
+            break;
+
+            case "View Low Inventory":
+            displayLowInvTable();
+            break;
+
+            case "Add a New Product":
+            addNewProduct();
+            break;
+
+            case "Add Quantity to Existing Item":
+            updateQuantity();
+            break;
+        }
     });
 }
