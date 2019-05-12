@@ -24,7 +24,7 @@ const connection = mySql.createConnection({
 connection.connect((err) => {
     if(err) throw err;
 
-    console.log(`Connected as ID ${connection.threadID}`)
+    console.log("connected as id " + connection.threadId)
 
     displayTable();
 });
