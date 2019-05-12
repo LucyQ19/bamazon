@@ -22,7 +22,7 @@ const connection = mysql.createConnection({
 connection.connect((err) => {
     if(err) throw err;
     
-    console.log("Connected as id: " + connection.threadId);
+    console.log(`Connected as id: ${connection.threadId}`);
 
     displayTable();
 });
@@ -92,4 +92,36 @@ const managerRequest = () => {
             break;
         }
     });
+}
+
+const displayLowInvTable = () => {
+    let lowCount = 5;
+    let query = `SELECT * FROM products WHERE stock_Quantity < ${lowCount}`;
+
+    connection.query(query, (err, res, fields) => {
+        let table = new Table ({
+            head: [
+                "item_ID",
+                "product_Name",
+                "department_Name",
+                "price",
+                "stock_Quantity"
+            ],
+
+            colWidths: [10, 65, 20, 10, 20]
+        });
+
+        for (let i = 0; i < res.length; i ++) {
+            let newArr = new Array();
+
+            table.push(newArr);
+
+            for (let j = 0; j < columns.length; j++) {
+                newArr.push(res[i][columns[j]]);
+            }
+        }
+
+        console.log(table.toString());
+        managerRequest();
+    })
 }
