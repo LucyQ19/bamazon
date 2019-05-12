@@ -23,7 +23,7 @@ These are the prompts the User must answer:
 
 ![Image of BAMazon Customer Prompts](./images/BAMazonCustomerPrompts.png)
 
-Once the the customer has a placed an order, the table updates with the new amounts of stock quantity:
+Once the the customer has placed an order, the table updates with the new amounts of stock quantity:
 
 ![Image of BAMazon Insufficient Quantity Message](./images/BAMazonUpdateTable.png)
 
