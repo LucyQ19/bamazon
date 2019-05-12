@@ -2,7 +2,7 @@
 
 ### About BAMazon:
 
-This app gives the user the option to purchase from the amazing BAMazon store or the manager the option to view products for sale, to view products that are low in stock quantity, to add new products, or to add stock to an existing product.  A table displays, consisting of an item ID, product name, department name, price, and stock quantity.
+This app gives the user the option to purchase from the amazing BAMazon store, or the manager the option to view products for sale, to view products that are low in stock, to add new products, or to add stock to an existing product.  A table displays, consisting of an item ID, product name, department name, price, and stock quantity.
 
 ### What Packages Are Used:
 * MySQL
@@ -21,7 +21,7 @@ This is the Table that first appears for the user:
 
 ![Image of BAMazon Customer Application Table](./images/BAMazonCustomerApplicationTable.png)
 
-These are the prompts the User must answer:
+These are the prompts the User answers:
 
 ![Image of BAMazon Customer Prompts](./images/BAMazonCustomerPrompts.png)
 
@@ -36,7 +36,7 @@ or the message "Insufficient quantity!" appears:
 
 ### The Manager Application: 
 
-These are the prompts the Manager must answer:
+These are the prompts the Manager answers:
 
 ![Image of BAMazon Manager Prompts](./images/BAMazonManagerPrompts.png)
 
@@ -54,7 +54,7 @@ This is the Add Product option:
 
 ![Image of BAMazon Add Product Table](./images/BAMazonAddProductTable.png)
 
-This is the Add Quantity to Existing Product: 
+This is the Add Quantity to Existing Product option: 
 
 ![Image of BAMazon Add Quantity Prompts](./images/BAMazonAddQuantityPrompts.png)
 
