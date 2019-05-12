@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const mySql = require("mysql");
-const cliTable = require("cli-table");
+const Table = require("cli-table");
 
 let resString = "";
 let resJSON = "";
@@ -92,3 +92,7 @@ const customerRequest = () => {
         checkQuantity(answer.id, answer.quantity);
     });
 };
+
+const checkQuantity = (id, quantity) => {
+
+}
