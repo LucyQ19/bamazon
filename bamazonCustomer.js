@@ -105,14 +105,14 @@ const checkQuantity = (id, quantity) => {
 
             let stockedJSON = JSON.stringify(res, null, 2);
             let stockedParsed = JSON.parse(stockedJSON);
-            let stockedQuantity = stockedParsed[0].stock_Quantity;
+            let stockedQuantity = stockedParsed[0].stockQuantity;
 
             if(stockedQuantity >= quantity) {
                 let query = "UPDATE products SET ? WHERE ?";
 
                 connection.query(query, [
                     {
-                        stock_Quantity: stockedQuantity - quantity
+                        stockQuantity: stockedQuantity - quantity
                     },
                     {
                         item_ID: id 
