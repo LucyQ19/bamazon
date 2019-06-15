@@ -1,7 +1,7 @@
 {
   "name": "bamazon",
   "version": "1.0.0",
-  "description": "",
+  "description": "BAMazon gives the user the option to purchase from the amazing BAMazon store, or the manager the option to view products for sale, to view products that are low in stock, to add new products, or to add stock to an existing product.  A table displays, consisting of an item ID, product name, department name, price, and stock quantity.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
