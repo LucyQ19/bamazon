@@ -1,19 +1,22 @@
 # bamazon
 
-### About BAMazon:
+### About this App:
 
 This app gives the user the option to purchase from the amazing BAMazon store, or the manager the option to view products for sale, to view products that are low in stock, to add new products, or to add stock to an existing product.  A table displays, consisting of an item ID, product name, department name, price, and stock quantity.
 
-### What Packages Are Used:
-* MySQL
-* Inquirer
+### Packages and Technologies Used for this App:
+
+* Node.js,
+* MySQL,
+* Inquirer, and
 * CLI-Table
 
-### How It Works:
+### Setup the Local Environment of this App:
 
-1. Clone repository to your computer.
-2. Peform npm install in your terminal.
-3. Run node bamazonCustomer.js  or bamazonManager.js in your terminal.
+1. Clone my repo using the command line.
+2. Change the directory to the cloned repo.
+3. Install all required NPM packages by typing npm install.
+4. Start the application server on the command line by typing node bamazonCustomer.js  or bamazonManager.js in your terminal.
 
 ### The Customer Application:
 
@@ -21,7 +24,7 @@ This is the Table that first appears for the user:
 
 ![Image of BAMazon Customer Application Table](./images/BAMazonCustomerApplicationTable.png)
 
-These are the prompts the User answers:
+These are the prompts the user answers:
 
 ![Image of BAMazon Customer Prompts](./images/BAMazonCustomerPrompts.png)
 
@@ -36,7 +39,7 @@ or the message "Insufficient quantity!" appears:
 
 ### The Manager Application: 
 
-These are the prompts the Manager answers:
+These are the prompts the manager answers:
 
 ![Image of BAMazon Manager Prompts](./images/BAMazonManagerPrompts.png)
 
@@ -60,6 +63,6 @@ This is the Add Quantity to Existing Product option:
 
 ![Image of BAMazon Add Quantity Table](./images/BAMazonAddQuantityTable.png)
 
-### Thanks for visiting my github!
+### Thanks for visiting my GitHub!
 
-Enjoy looking at my BAMazon App here: https://lucyq19.github.io/bamazon/
+If you like this app, you may enjoy using more of my apps here: https://lucyq19.github.io/professionalPortfolio/
